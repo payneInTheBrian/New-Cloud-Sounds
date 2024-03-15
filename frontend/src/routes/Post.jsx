@@ -2,25 +2,22 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { API_BASE } from "../constants";
 
-
-
 export default function Post() {
 	const { user } = useOutletContext();
 	const postId = useParams().id;
 	const navigate = useNavigate();
 
 	const [post, setPost] = useState();
+	const [comments, setComments] = useState([]);
+
 	useEffect(() => {
 		fetch(API_BASE + `/api/post/${postId}`, { credentials: "include" })
 			.then((res) => res.json())
-			.then(({ post }) => setPost(post));
+			.then(({ post, comments }) => {
+				setPost(post);
+				setComments(comments);
+			});
 	}, [setPost, postId]);
-
-	useEffect(() => {
-		fetch(API_BASE + "/api/profile", { credentials: "include" })
-			.then((res) => res.json())
-			
-	}, []);
 
 	if (post === undefined) return null;
 	else if (post === null) return <h2>Post not found</h2>;
@@ -41,11 +38,23 @@ export default function Post() {
 		const form = event.currentTarget;
 		await fetch(API_BASE + form.getAttribute('action'), {
 			method: form.method,
+			body: new URLSearchParams(new FormData(form)),
 			credentials: "include"
 		});
 		navigate(-1);
 	};
 
+	const handleAddComment = async (event) => {
+		event.preventDefault();
+		const form = event.currentTarget;
+		const response = await fetch(API_BASE + form.getAttribute('action'), {
+			method: form.method,
+			body: new URLSearchParams(new FormData(form)),
+			credentials: "include"
+		});
+		const comment = await response.json();
+		setComments([...comments, comment]);
+	};
 
 	return (
 		<div className="container cont d-flex justify-content-center">
@@ -53,7 +62,7 @@ export default function Post() {
 				<div className="">
 					<h2 className="songTitle">{post.title.toUpperCase()}</h2>
 					<p className="songTitle ">{post.caption}</p>
-					<p className="songTitle ">{post.userName}</p>
+					{/* <p className="songTitle ">{post.user}</p> */}
 					<div className="d-flex justify-content-center">
 					{post.image.endsWith('.mp4') ? <video src={post.image} alt={post.caption} ></video> : 
 					 post.image.toLowerCase().endsWith('.mp3') ? 
@@ -87,6 +96,23 @@ export default function Post() {
 						)}
 					</div>
 				</div>
+				<div className="mt-5">
+					<h2>Add a comment</h2>
+					<form action={'/api/comment/createComment/' + post._id} method="POST" onSubmit={handleAddComment}>
+						<div className="mb-3">
+							<label for="comment" className="form-label">Comment</label>
+							<textarea className="form-control" id="comment" name="comment"></textarea>
+						</div>
+						<button type="submit" className="btn btn-primary" value="Upload">Submit</button>
+					</form>
+				</div>
+				<ul>
+				{comments.map((comment) => (
+						<li key={comment._id} className="col-6 justify-content-between mt-5 commentCl">
+							<p className="commentCla">{comment.comment}</p>
+						</li>
+					))}
+				</ul>
 				
 				{/* <div className="col-6 mt-5 d-flex justify-content-center">
 					<Link className="btn btn-warning mx-2 fw-bold" to="/profile">Return to Profile</Link>

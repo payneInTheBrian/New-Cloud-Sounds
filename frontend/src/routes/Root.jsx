@@ -28,7 +28,7 @@ export default function Root() {
 
   return (
     <div className="backG">
-      <header className="container shadow mb-5">
+      <header className=" shadow mb-5">
         <div className="text-center">
           <h1 className="mt-3">((( Cloud Sounds )))</h1>
           {/* <span className="">We love Muzac</span> */}

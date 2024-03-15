@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function Foot() {
 	
 	return (
-		<div className="container  fooot">
-  <footer className="py-3 my-4">
+		<div className=" bg-dark mt-5 rounded fooot">
+  <footer className="py-3 my-4 ">
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
       <li className="nav-item"><Link className="nav-link px-2 text-warning outL" to="/">Home</Link></li>
       <li className="nav-item"><Link className="nav-link px-2 text-warning outL" to="/login">Login</Link></li>

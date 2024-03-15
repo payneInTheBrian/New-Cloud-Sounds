@@ -70,3 +70,20 @@
 .outL{
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+.commentCl{
+    background:rgba(252, 252, 252, 0.6);
+    color: black;
+    border: whitesmoke solid 1px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.commentCla{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem 0rem;
+}

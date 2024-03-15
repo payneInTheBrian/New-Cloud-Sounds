@@ -12,6 +12,8 @@ const cors = require("cors");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
+const commentRoutes = require("./routes/comment");
+
 
 
 //Use .env file in config folder
@@ -62,6 +64,8 @@ app.use(flash());
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/api/post", postRoutes);
+app.use("/api/comment", commentRoutes);
+
 
 app.use('*', (_, res) => {
   res.sendFile(path.join(__dirname, 'frontend/src'));
