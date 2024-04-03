@@ -1,3 +1,25 @@
+# Cloud Sounds
+
+---
+
+# Live @
+
+https://cloud-sounds.herokuapp.com/
+
+---
+
+# Objectives
+
+- Allows users to upload your music, share it with the world, and connect with other artists to discover new and exciting music
+
+---
+
+# Who is this for?
+
+- Musicians and music lovers
+
+---
+
 # Install
 
 `npm install`

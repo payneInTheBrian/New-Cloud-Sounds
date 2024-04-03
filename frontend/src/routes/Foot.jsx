@@ -12,7 +12,7 @@ export default function Foot() {
       <li className="nav-item"><Link className="nav-link px-2 text-warning outL" to="/Faqs">FAQs</Link></li>
       <li className="nav-item"><Link className="nav-link px-2 text-warning outL" to="/about">About</Link></li>
     </ul>
-    <h5 className="text-center text-light outL">&copy; 2022 Cloud City LLC</h5>
+    <h5 className="text-center text-light outL">&copy; 2024 Cloud City LLC</h5>
   </footer>
 </div>
 		
