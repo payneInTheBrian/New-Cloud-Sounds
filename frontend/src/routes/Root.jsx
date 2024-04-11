@@ -28,19 +28,22 @@ export default function Root() {
 
   return (
     <div className="backG">
-      <header className=" shadow mb-5">
-        <div className="text-center">
-          <h1 className="mt-3">((( Cloud Sounds )))</h1>
-          {/* <span className="">We love Muzac</span> */}
+      
+        <header className=" shadow d-flex flex-wrap justify-content-center py-3 mb-4 ">
+          <Link className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-non" to="/">
+            <img className="bi me-2" width="50" height="40"  src= "https://res.cloudinary.com/onehundreddevs/image/upload/v1673588157/rpnnmbcfz1fmwrfbbd7q.png" alt="cloud" />
+            <h1 >((( Cloud Sounds )))</h1>
+            {/* <span className="">We love Muzac</span> */}
+          </Link>
+          <ul className="nav nav-pills">
+            {/* <li className="nav-item"><Link className="btn btn-warning mx-2 my-2 fw-bold" to="/login">Login</Link></li> */}
+            <li className="nav-item"><Link className="btn btn-warning mx-2 my-2 fw-bold" to="/signup">Signup</Link></li>
+            <li className="nav-item"><Link className="btn btn-warning mx-2 my-2 fw-bold" to="/feed">Feed</Link></li>
+            <li className="nav-item"><Link className="btn btn-warning mx-2 my-2 fw-bold" to="/profile">Profile</Link></li>
+            <li className="nav-item"><Link to="/logout" className="btn btn-warning mx-2 my-2 fw-bold">Logout</Link></li>
+          </ul>
           
-          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/login">Login</Link>
-          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/signup">Signup</Link>
-          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/feed">Feed</Link>
-          <Link className="btn btn-warning mx-2 my-2 fw-bold" to="/profile">Profile</Link>
-          <Link to="/logout" className="btn btn-warning mx-2 my-2 fw-bold">Logout</Link>
-        </div>
-        
-      </header>
+        </header>
       
 			<Messages messages={messages} />
       <Outlet context={{ user, setUser, setMessages }} />

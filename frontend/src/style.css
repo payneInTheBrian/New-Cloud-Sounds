@@ -17,7 +17,8 @@
     min-height: 75vh;
     border: white solid 1px;
     border-radius: 25px;
-    background:rgba(252, 252, 252, 0.6)
+    background:rgba(252, 252, 252, 0.6);
+    
 }
 .insideCont{
     min-width: 70vw;
