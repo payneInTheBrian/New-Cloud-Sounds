@@ -74,7 +74,7 @@ export function Profile() {
 								<label htmlFor="imgUpload" className="form-label">Pic</label>
 								<input type="file" className="form-control" id="image2Upload" name="file" />
 							</div> */}
-							<button type="submit" className="btn btn-warning fw-bold d-flex justify-content-center" value="Upload">Submit</button>
+							<button type="submit" className="btn btn-warning fw-bold d-flex justify-content-center hBtn" value="Upload">Submit</button>
 						</form>
 					</div>
 			</div>

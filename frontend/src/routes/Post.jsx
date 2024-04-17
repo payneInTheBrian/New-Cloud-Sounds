@@ -103,7 +103,7 @@ export default function Post() {
 							<label for="comment" className="form-label">Comment</label>
 							<textarea className="form-control" id="comment" name="comment"></textarea>
 						</div>
-						<button type="submit" className="btn btn-primary" value="Upload">Submit</button>
+						<button type="submit" className="btn btn-warning fw-bold hBtn" value="Upload">Submit</button>
 					</form>
 				</div>
 				<ul>

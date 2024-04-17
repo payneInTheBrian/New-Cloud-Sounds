@@ -8,7 +8,8 @@
 .playerF{
     border: white solid 1px;
     border-radius: 25px;
-    background:rgba(252, 252, 252, 0.6)
+    background:rgba(252, 252, 252, 0.6);
+    margin-bottom: 1rem;
 }
 
 .cont{
@@ -56,15 +57,13 @@
 }
 
 
-
-
 .fooot{
     width: 100%;
     bottom:auto;
     display: flex;
     align-items: center;
-  justify-content: center;
-
+    justify-content: center;
+    background-color: black;
 
 }
 
@@ -87,4 +86,18 @@
     display: flex;
     flex-direction: row;
     padding: 1rem 1rem 0rem;
+}
+
+.hBtn:hover {
+    background-color: black;
+    color: #ffc107 ;
+}
+
+.sBtn{
+    color: #ffc107;
+}
+
+.sBtn:hover{
+    background-color: #ffc107;
+    color: black;
 }
