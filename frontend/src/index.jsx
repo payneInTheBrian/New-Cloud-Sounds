@@ -17,9 +17,10 @@ import { Profile } from './routes/Profile';
 import Logout from './routes/Logout';
 import Feed from './routes/Feed';
 import Post from './routes/Post';
-import Foot from './routes/Foot'
-import About from './routes/About'
-import Faqs from './routes/Faqs'
+import Foot from './routes/Foot';
+import Header from './routes/header';
+import About from './routes/About';
+import Faqs from './routes/Faqs';
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "/foot",
         element: <Foot />,
+      },
+      {
+        path: "/header",
+        element: <Header />,
       },
       {
         path: "/profile",
