@@ -16,6 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "browserslist": "^4.23.0",
+    "caniuse-lite": "^1.0.30001621",
     "cloudinary": "^1.25.1",
     "connect-mongo": "^3.2.0",
     "cors": "^2.8.5",
