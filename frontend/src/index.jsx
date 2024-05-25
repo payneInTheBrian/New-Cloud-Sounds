@@ -18,7 +18,7 @@ import Logout from './routes/Logout';
 import Feed from './routes/Feed';
 import Post from './routes/Post';
 import Foot from './routes/Foot';
-import Header from './routes/header';
+import Header from './routes/Header';
 import About from './routes/About';
 import Faqs from './routes/Faqs';
 

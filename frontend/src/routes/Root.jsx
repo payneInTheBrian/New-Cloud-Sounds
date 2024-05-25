@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import Messages from '../components/Messages';
 import { API_BASE } from "../constants";
 import Foot from "./Foot"
-import Header from "./header";
+import Header from "./Header";
 
 
 export default function Root() {
